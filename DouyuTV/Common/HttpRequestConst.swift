@@ -33,12 +33,6 @@ func YJSectionGameDetaiList(id:String,page:uint,limit:uint = 20)->String{
     return "\(baseURL)/api/v1/live/\(id)?aid=ios&client_sys=ios&limit=\(limit)&offset=\(offSet)&time=\((Int64)(NSDate().timeIntervalSince1970))"
 }
 
-//抓下登陆接口看看
-
-
-//返回用户自己的信息 肯定和token相关的
-//http://www.douyutv.com/api/v1/my_info?aid=ios&auth=7f4156746fbd6910c5a310acc4378f2f&client_sys=ios&time=1448119200&token=ff32c04fa0d719fd
-
 
 //http://www.douyutv.com/api/v1/follow/check/339715?aid=ios&auth=f29af877cc4479655dd638cf12a2f4a0&client_sys=ios&time=1448119200&token=ff32c04fa0d719fd  这个没看懂。 返回的是 {"error":0,"data":0}
 

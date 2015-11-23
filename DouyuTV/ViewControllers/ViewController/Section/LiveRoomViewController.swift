@@ -68,7 +68,7 @@ class LiveRoomViewController: BaseViewController {
                 if let data = ret {
                     self.liveCollectionView.data += data
                 }
-                self.liveCollectionView.headerEndRefresh()
+                self.liveCollectionView.footerEndRefresh()
             }
         }else{
             DLog("cate_id类型错误")
