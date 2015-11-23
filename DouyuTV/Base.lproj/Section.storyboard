@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QuO-Cy-yaL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--栏目-->
+        <scene sceneID="Iee-aZ-akG">
+            <objects>
+                <viewController restorationIdentifier="Section" storyboardIdentifier="Section" title="栏目" id="QuO-Cy-yaL" customClass="SectionViewController" customModule="DouyuTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2F8-Rd-2qc"/>
+                        <viewControllerLayoutGuide type="bottom" id="iBe-h7-xCV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ifj-Nl-oaq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZYF-wH-Vcq" customClass="RefreshCollectionView" customModule="DouyuTV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ToN-KB-IHr">
+                                    <size key="itemSize" width="116" height="195"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionCollectionCell" id="sk5-Uu-vsH" customClass="SectionCollectionCell" customModule="DouyuTV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="116" height="195"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="195"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_column_default" translatesAutoresizingMaskIntoConstraints="NO" id="qvE-sY-nsm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="169"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="qvE-sY-nsm" secondAttribute="height" multiplier="116:169" id="Hd8-Ax-kJ1"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英雄联盟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzR-aO-ptN">
+                                                    <rect key="frame" x="1" y="171" width="115" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="qvE-sY-nsm" firstAttribute="top" secondItem="sk5-Uu-vsH" secondAttribute="top" id="DFs-Qg-768"/>
+                                            <constraint firstAttribute="trailing" secondItem="rzR-aO-ptN" secondAttribute="trailing" id="DI8-Qc-4Ou"/>
+                                            <constraint firstItem="rzR-aO-ptN" firstAttribute="leading" secondItem="sk5-Uu-vsH" secondAttribute="leading" constant="1" id="IC2-gv-PG5"/>
+                                            <constraint firstItem="rzR-aO-ptN" firstAttribute="top" secondItem="qvE-sY-nsm" secondAttribute="bottom" constant="2" id="TWc-Rt-Ee1"/>
+                                            <constraint firstAttribute="bottom" secondItem="rzR-aO-ptN" secondAttribute="bottom" constant="3" id="Um6-Gf-u4X"/>
+                                            <constraint firstItem="qvE-sY-nsm" firstAttribute="leading" secondItem="sk5-Uu-vsH" secondAttribute="leading" id="Vff-gZ-HVM"/>
+                                            <constraint firstAttribute="trailing" secondItem="qvE-sY-nsm" secondAttribute="trailing" id="wqa-xv-v60"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="qvE-sY-nsm" id="CC1-3T-pHG"/>
+                                            <outlet property="titile" destination="rzR-aO-ptN" id="oKT-B9-DUD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZYF-wH-Vcq" firstAttribute="top" secondItem="2F8-Rd-2qc" secondAttribute="bottom" id="3Ct-Do-Txf"/>
+                            <constraint firstItem="iBe-h7-xCV" firstAttribute="top" secondItem="ZYF-wH-Vcq" secondAttribute="bottom" id="9eu-W3-vsZ"/>
+                            <constraint firstItem="ZYF-wH-Vcq" firstAttribute="leading" secondItem="ifj-Nl-oaq" secondAttribute="leading" id="tbU-vV-10S"/>
+                            <constraint firstAttribute="trailing" secondItem="ZYF-wH-Vcq" secondAttribute="trailing" id="z9g-qj-Zub"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aI5-RD-dwK"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ZYF-wH-Vcq" id="mvs-EZ-qfT"/>
+                        <segue destination="m4F-MA-vyB" kind="show" identifier="LiveRoomViewController" id="cK7-1L-pzk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgN-B4-Ydu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="-590"/>
+        </scene>
+        <!--直播房间列表-->
+        <scene sceneID="tIe-5f-kwN">
+            <objects>
+                <viewController restorationIdentifier="LiveRoomViewController" storyboardIdentifier="LiveRoomViewController" id="m4F-MA-vyB" userLabel="直播房间列表" customClass="LiveRoomViewController" customModule="DouyuTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zko-NG-ldO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ysp-cy-Ff5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2F2-xN-bVU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NFV-Of-qrr" customClass="LiveCollectionView" customModule="DouyuTV" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X06-wV-96d">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NFV-Of-qrr" firstAttribute="top" secondItem="zko-NG-ldO" secondAttribute="bottom" id="ELF-3G-edD"/>
+                            <constraint firstAttribute="trailing" secondItem="NFV-Of-qrr" secondAttribute="trailing" id="TcX-Df-rWM"/>
+                            <constraint firstItem="NFV-Of-qrr" firstAttribute="leading" secondItem="2F2-xN-bVU" secondAttribute="leading" id="Xzc-u7-nu6"/>
+                            <constraint firstItem="ysp-cy-Ff5" firstAttribute="top" secondItem="NFV-Of-qrr" secondAttribute="bottom" id="nfJ-3e-TmV"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="liveCollectionView" destination="NFV-Of-qrr" id="qZz-EC-wHa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vvw-qV-6j0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1271" y="-590"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image_column_default" width="116" height="169"/>
+    </resources>
+</document>
